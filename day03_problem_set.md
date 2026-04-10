@@ -32,7 +32,7 @@ b = 5.0
 
 👉 This fails because Python does not allow operations between string and integer types without explicit conversion.
 
-🚀 Mutable vs Immutable
+### Mutable vs Immutable
 ❓ Why does this work differently?
 a = [1,2,3]
 b = a
@@ -63,7 +63,7 @@ b = 10
 
 👉 The original list gets modified unintentionally because functions receive references, not copies.
 
-🚀 Type Conversion / Casting
+### Type Conversion / Casting
 ❓ What’s the difference between implicit and explicit type conversion in Python?
 
 👉 Implicit conversion is automatic (e.g., int → float).
@@ -89,7 +89,7 @@ float(input())
 👉 str(10) is created at runtime.
 👉 Both behave the same but are created differently.
 
-🚀 Variables + Data Types
+### Variables + Data Types
 ❓ If variables don’t have types, then what actually has the type?
 
 👉 Objects have types, not variables. Variables only store references to objects.
@@ -118,7 +118,7 @@ print(b)
 
 👉 It creates a completely independent copy, avoiding shared references.
 
-🚀 Identity vs Equality
+### Identity vs Equality
 ❓ Difference between:
 a == b
 a is b
@@ -136,7 +136,7 @@ b = 100
 
 👉 It is the memory address of an object, which can be checked using id().
 
-🚀 General Questions
+### General Questions
 ❓ Why does this fail?
 int("Hello")
 
