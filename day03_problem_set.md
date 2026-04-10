@@ -1,5 +1,5 @@
-Day 3
-🚀 Data Types
+###Day 3
+### Data Types
 ❓ Why does Python not require explicit data type declaration but still enforces types at runtime?
 
 👉 Python is dynamically typed, so you don’t declare types manually.
