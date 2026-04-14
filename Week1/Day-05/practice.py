@@ -13,7 +13,6 @@ print("Modulus:", a % b)
 print("Power:", a ** b)
 print("Floor Division:", a // b)
 
-print("-----")
 
 # Assignment Operators
 x = 5
@@ -23,21 +22,18 @@ print("x after += :", x)
 x *= 2
 print("x after *= :", x)
 
-print("-----")
 
 # Comparison Operators
 print("5 > 3:", 5 > 3)
 print("5 == 3:", 5 == 3)
 print("5 != 3:", 5 != 3)
 
-print("-----")
 
 # Logical Operators
 print("True and False:", True and False)
 print("True or False:", True or False)
 print("not True:", not True)
 
-print("-----")
 
 # Identity Operators
 a = [1, 2, 3]
@@ -47,7 +43,6 @@ c = [1, 2, 3]
 print("a is b:", a is b)
 print("a is c:", a is c)
 
-print("-----")
 
 # Membership Operators
 nums = [1, 2, 3, 4]
@@ -55,14 +50,12 @@ nums = [1, 2, 3, 4]
 print("2 in nums:", 2 in nums)
 print("5 not in nums:", 5 not in nums)
 
-print("-----")
 
 # Bitwise Operators
 print("5 & 3:", 5 & 3)
 print("5 | 3:", 5 | 3)
 print("5 ^ 3:", 5 ^ 3)
 
-print("-----")
 
 # Real Example
 age = 20
