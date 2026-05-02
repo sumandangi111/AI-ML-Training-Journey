@@ -3,39 +3,39 @@ Supports + - * / %
 Handles invalid input using error handling
 Allows continuous operations until user exits'''
 
-# def calculator():
-#     print("=== Advanced Calculator ===")
+def calculator():
+    print("=== Advanced Calculator ===")
     
-#     while True:
-#         try:
-#             num1 = float(input("Enter first number: "))
-#             op = input("Enter operator (+, -, *, /, %): ")
-#             num2 = float(input("Enter second number: "))
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+            op = input("Enter operator (+, -, *, /, %): ")
+            num2 = float(input("Enter second number: "))
 
-#             if op == '+':
-#                 print("Result:", num1 + num2)
-#             elif op == '-':
-#                 print("Result:", num1 - num2)
-#             elif op == '*':
-#                 print("Result:", num1 * num2)
-#             elif op == '/':
-#                 if num2 == 0:
-#                     print("Cannot divide by zero!")
-#                 else:
-#                     print("Result:", num1 / num2)
-#             elif op == '%':
-#                 print("Result:", num1 % num2)
-#             else:
-#                 print("Invalid operator!")
+            if op == '+':
+                print("Result:", num1 + num2)
+            elif op == '-':
+                print("Result:", num1 - num2)
+            elif op == '*':
+                print("Result:", num1 * num2)
+            elif op == '/':
+                if num2 == 0:
+                    print("Cannot divide by zero!")
+                else:
+                    print("Result:", num1 / num2)
+            elif op == '%':
+                print("Result:", num1 % num2)
+            else:
+                print("Invalid operator!")
 
-#         except ValueError:
-#             print("Invalid input! Please enter numbers only.")
+        except ValueError:
+            print("Invalid input! Please enter numbers only.")
 
-#         choice = input("Continue? (yes/no): ")
-#         if choice.lower() != 'yes':
-#             break
+        choice = input("Continue? (yes/no): ")
+        if choice.lower() != 'yes':
+            break
 
-# calculator()
+calculator()
 
 #----------------------------------------------------------------------
 
@@ -47,29 +47,29 @@ Splits fairly or unequally
 Displays who owes whom'''
 
 
-# def expense_splitter():
-#     n=int(input("Enter number of people: "))
-#     names=[]
-#     expenses={}
+def expense_splitter():
+    n=int(input("Enter number of people: "))
+    names=[]
+    expenses={}
 
-#     for i in range(n):
-#         name=input(f"Enter name {i+1}: ")
-#         amount=float(input(f"Expense for {name}: "))
-#         names.append(name)
-#         expenses[name]=amount
-#     total=sum(expenses.values())
-#     equal_share=total/n
+    for i in range(n):
+        name=input(f"Enter name {i+1}: ")
+        amount=float(input(f"Expense for {name}: "))
+        names.append(name)
+        expenses[name]=amount
+    total=sum(expenses.values())
+    equal_share=total/n
 
-#     print("\n--------Split amount--------")
-#     for name in names:
-#         diff=expenses[name]-equal_share
-#         if diff>0:
-#             print(f"{name} should receive {diff:.2f}")
-#         elif diff<0:
-#             print(f"{name} should pay {-diff:.2f}")
-#         else:
-#             print(f"{name} nothing to pay or receive")
-# expense_splitter()
+    print("\n--------Split amount--------")
+    for name in names:
+        diff=expenses[name]-equal_share
+        if diff>0:
+            print(f"{name} should receive {diff:.2f}")
+        elif diff<0:
+            print(f"{name} should pay {-diff:.2f}")
+        else:
+            print(f"{name} nothing to pay or receive")
+expense_splitter()
 
 #---------------------------------------------------------------------
 
@@ -80,28 +80,28 @@ Length (m ↔ km)
 Weight (kg ↔ g)
  Use a menu-driven system
 '''
-# def unit_converter():
-#     while True:
-#         print("\n1. Temperature (C -> F)")
-#         print("2. Length (m -> km)")
-#         print("3. Weight (kg -> g)")
-#         print("4. Exit")
+def unit_converter():
+    while True:
+        print("\n1. Temperature (C -> F)")
+        print("2. Length (m -> km)")
+        print("3. Weight (kg -> g)")
+        print("4. Exit")
 
-#         choice=int(input("choose option: "))
-#         if choice==1:
-#             c=float(input("Enter Celcius: "))
-#             print("Fahrenheit: ",(c*9/5)+32)
-#         elif choice==2:
-#             m=float(input("Enter meters: "))
-#             print("Kilometers : ",m/1000)
-#         elif choice==3:
-#             kg=float(input("Enter kg: "))
-#             print("Grams:",kg*1000)
-#         elif choice==4:
-#             break
-#         else:
-#             print("Invalid choice!")
-# unit_converter()
+        choice=int(input("choose option: "))
+        if choice==1:
+            c=float(input("Enter Celcius: "))
+            print("Fahrenheit: ",(c*9/5)+32)
+        elif choice==2:
+            m=float(input("Enter meters: "))
+            print("Kilometers : ",m/1000)
+        elif choice==3:
+            kg=float(input("Enter kg: "))
+            print("Grams:",kg*1000)
+        elif choice==4:
+            break
+        else:
+            print("Invalid choice!")
+unit_converter()
 
 #-------------------------------------------------------------------
 
@@ -114,26 +114,26 @@ Calculate:
      Highest scorer
      Pass/Fail status
 '''
-# def student_analyzer():
-#     students={}
-#     n=int(input("Enter number of stuents: "))
-#     for _ in range(n):
-#         name=input("Enter name: ")
-#         marks=float(input("Enter marks: "))
-#         students[name]=marks
+def student_analyzer():
+    students={}
+    n=int(input("Enter number of stuents: "))
+    for _ in range(n):
+        name=input("Enter name: ")
+        marks=float(input("Enter marks: "))
+        students[name]=marks
     
-#     avg=sum(students.values())/n
-#     topper=max(students,key=students.get)
+    avg=sum(students.values())/n
+    topper=max(students,key=students.get)
 
-#     print("\nAverage Marks:",avg)
-#     print("Topper:",topper)
+    print("\nAverage Marks:",avg)
+    print("Topper:",topper)
 
-#     print("\nPass/Fail Status:")
-#     for name,marks in students.items():
-#         status="Pass" if marks>=40 else "Fail"
-#         print(name,":",status)
+    print("\nPass/Fail Status:")
+    for name,marks in students.items():
+        status="Pass" if marks>=40 else "Fail"
+        print(name,":",status)
 
-# student_analyzer()
+student_analyzer()
 
 '''5. Number Guessing Game (Enhanced)
 Random number generation
@@ -169,3 +169,31 @@ Contains uppercase, lowercase
 Contains number and special character
 Return Weak / Medium / Strong
 '''
+# re = regular expressions , Used to search patterns inside strings
+
+import re
+def password_checker():
+    pwd=input("Enter password: ")
+
+    if len(pwd)<8:
+        print("Weak")
+        return
+    
+    if(re.search("[A-Z]",pwd)and
+       re.search("[a-z]",pwd)and
+       re.search("[0-9]",pwd)and
+       re.search("[@#$%^&*]",pwd)):
+        print("Strong")
+    else:
+        print("Medium")
+
+password_checker()
+
+'''7. Mini ATM System (Assignment Level)
+Features:
+PIN authentication
+Deposit / Withdraw
+Balance check
+Transaction history (use list)
+'''
+

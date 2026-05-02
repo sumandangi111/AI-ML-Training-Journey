@@ -1,4 +1,4 @@
-# Conditional
+# -----------------Conditional-------------------
 
 # 1. Swap two numbers
 a=2
@@ -41,6 +41,8 @@ elif(b>a)and(b>c):
 else:
     print(c,"is greatest")
 
+
+# --------------------------- Loop------------------------------
 # Prime or not
 num = int(input("Enter a number here: "))
 if num <= 1:
