@@ -1,161 +1,146 @@
-# 📘 Functions in Python
-
-## 🔹 What is a Function?
-A **function** is a block of reusable code used to perform a specific task.
-
-### 👉 Benefits:
-- Code reusability  
-- Reduces repetition  
-- Improves readability  
+# 📘 Python Notes – Lambda Functions (Basics)
 
 ---
 
-## 🔹 Basic Syntax
+# 🔹 1. Lambda Function
+
+## ✅ Definition:
+
+A **lambda function** is a **small anonymous (unnamed) function** used for short, one-line operations.
+
+---
+
+## 🔹 2. Syntax
 
 ```python
-def function_name():
-    # code
-✅ Example:
-def test():
-    print("Testing")
+lambda arguments : expression
+```
 
-test()   # function call
+👉 It takes input → returns output (without using `return` keyword)
 
+---
 
-🔹 Parameters vs Arguments
-Term	    Meaning
-Parameter	Variable in function definition
-Argument	Value passed during function call
+## 🔹 3. Basic Example
 
+```python
+add = lambda a, b: a + b
+print(add(2, 3))   # Output: 5
+```
 
-✅ Example:
-def add(a, b):   # a, b → parameters
-    c = a + b
-    print(c)
+---
 
-add(2, 3)   # 2, 3 → arguments
+## 🔹 4. Without Variable
 
-Output:
+```python
+print((lambda x: x * 2)(5))   # Output: 10
+```
 
-5
+---
 
+## 🔹 5. Lambda with One Argument
 
-🔥 Types of Parameters in Python
+```python
+square = lambda x: x * x
+print(square(4))   # 16
+```
 
-There are 5 types of arguments:
+---
 
-1️⃣ Positional Arguments
+## 🔹 6. Lambda with Multiple Arguments
 
-Values are assigned based on position.
+```python
+multiply = lambda a, b, c: a * b * c
+print(multiply(2, 3, 4))   # 24
+```
 
-def test(a, b):
-    print(a, b)
+---
 
-test(10, 20)
+# 🔹 7. Why Use Lambda?
 
-Output:
+* Short and quick function
+* No need to define using `def`
+* Useful for temporary operations
 
-10 20
+---
 
-❗ Order matters.
+# 🔹 8. Lambda vs Normal Function
 
+| Feature | Lambda      | Normal Function |
+| ------- | ----------- | --------------- |
+| Name    | No          | Yes             |
+| Syntax  | Short       | Longer          |
+| Use     | Small tasks | Complex logic   |
 
-2️⃣ Keyword Arguments
+---
 
-Values are assigned using parameter names.
+# 🔹 9. Lambda with Conditional (Important)
 
-def test(a, b):
-    print(a, b)
+```python
+check = lambda x: "Even" if x % 2 == 0 else "Odd"
+print(check(5))   # Odd
+```
 
-test(b="Suman", a="Megha")
+---
 
-Output:
+# 🔹 10. Lambda with `map()`
 
-Megha Suman
+## ✅ Definition:
 
-✔ Order does NOT matter
+`map()` applies a function to all elements of a list.
 
+```python
+nums = [1, 2, 3, 4]
 
-3️⃣ Arbitrary Arguments (*args)
+result = list(map(lambda x: x * 2, nums))
+print(result)   # [2, 4, 6, 8]
+```
 
-Used when number of arguments is unknown. Stored as a tuple.
+---
 
-def test(*a):
-    print(a)
+# 🔹 11. Lambda with `filter()`
 
-test(1, 2, 3, 4)
+## ✅ Definition:
 
-Output:
+`filter()` selects elements based on condition.
 
-(1, 2, 3, 4)
-Access specific value:
-def test(*a):
-    print(a[2])
+```python
+nums = [1, 2, 3, 4, 5]
 
-test(10, 20, 30, 40)
+result = list(filter(lambda x: x % 2 == 0, nums))
+print(result)   # [2, 4]
+```
 
-Output:
+---
 
-30
+# 🔹 12. Lambda with `sorted()`
 
-4️⃣ Default Arguments
+```python
+data = [(1, 3), (2, 1), (4, 2)]
 
-Parameter has a default value.
+print(sorted(data, key=lambda x: x[1]))
+```
 
-def test(a="Suman"):
-    print(a)
+---
 
-test()
+# 🔹 13. Limitations
 
-Output:
+* Only one expression allowed
+* Not suitable for complex logic
+* Less readable for beginners
 
-Suman
-Override default:
-test("Rahul")
+---
 
-Output:
+# 🔹 14. When to Use
 
-Rahul
+✔ Small calculations
+✔ Temporary functions
+✔ With `map()`, `filter()`, `sorted()`
 
-5️⃣ Keyword Arbitrary Arguments (**kwargs)
+---
 
-Accepts multiple keyword arguments. Stored as a dictionary.
+# 🔹 15. When NOT to Use
 
-def test(**a):
-    print(a)
+❌ Complex logic
+❌ Multiple statements
 
-test(name="Suman", age=21)
-
-Output:
-
-{'name': 'Suman', 'age': 21}
-Access values:
-def test(**a):
-    print(a["name"])
-
-test(name="Suman", age=21)
-
-Output:
-
-Suman
-
-
-🔹 Important Notes
-*args → tuple
-**kwargs → dictionary
-
-✔ Correct Order of Parameters:
-def func(positional, default, *args, **kwargs):
-    pass
-
-🔹 Key Points to Remember
-Function = reusable block of code
-Parameters = variables
-Arguments = actual values
-
-5 Types of Arguments:
-Positional
-Keyword
-*args
-Default
-**kwargs
+---
