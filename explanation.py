@@ -50,8 +50,3 @@ Lists
 #     totall+=l[i]
 # print(totall)
 
-value=input("Enter string: ")
-# print(value[::-1])
-temp=[]
-for value in range(1,len(value),-1):
-    print(value)

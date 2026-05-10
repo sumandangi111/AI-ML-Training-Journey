@@ -1,5 +1,5 @@
 # List
-a=[1,2,2,3,4,5]
+'''a=[1,2,2,3,4,5]
 a.append(6)
 a.insert(0,1)
 b=[7,8,9,10]
@@ -68,4 +68,29 @@ old.remove(2)#give error if value dosn't exist
 old.discard(3)#no error if value is not exist
 old.clear()
 del old
-print(old)
+print(old)'''
+
+
+#String
+'''s="suman dangi"
+print(s.upper())
+print(s.lower())
+print(s.capitalize())
+print(s.title())
+print(s[0:2]) #string slicing
+
+#strip()-remove whitespace from beginning and end
+a=" Suman "
+print(a.strip())
+print(a.replace("an","it"))
+
+#split()-convert string to list
+a="Suman Dangi"
+b=a.split(" ")
+new=",".join(b)
+print(new)'''
+
+# concatenate string
+a="suman"
+b="dangi"
+print(a+" "+b)
