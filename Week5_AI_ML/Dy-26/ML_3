@@ -1,0 +1,527 @@
+# Machine Learning Engineering & ML Pipeline Notes
+
+---
+
+# 1. What is Machine Learning Engineering?
+
+Machine Learning Engineering is the process of:
+
+- Collecting data
+- Preparing data
+- Training models
+- Evaluating models
+- Deploying models
+- Monitoring model performance
+
+It combines:
+
+- Machine Learning
+- Software Engineering
+- Data Engineering
+- DevOps
+
+## Goal
+
+The goal is to build reliable and scalable AI systems.
+
+---
+
+# 2. Machine Learning Pipeline
+
+A Machine Learning Pipeline is a sequence of steps followed to build and maintain an ML model.
+
+---
+
+# Complete ML Pipeline Flow
+
+```text
+Data Collection
+       ↓
+Data Cleaning
+       ↓
+Feature Engineering
+       ↓
+Model Training
+       ↓
+Model Evaluation
+       ↓
+Deployment
+       ↓
+Monitoring
+       ↓
+Feedback / Retraining
+```
+
+---
+
+# 3. Data Collection
+
+Data Collection is the first step in Machine Learning.
+
+## Sources of Data
+
+- Databases
+- APIs
+- Sensors
+- Websites
+- Excel/CSV files
+- Cloud storage
+
+## Example
+
+For house price prediction:
+
+- House size
+- Number of rooms
+- Location
+- Price
+
+---
+
+# 4. Data Exploration & Validation
+
+Before training the model, data is analyzed and checked.
+
+## Tasks Performed
+
+- Checking missing values
+- Checking duplicate records
+- Understanding data types
+- Finding outliers
+- Data profiling
+
+## Example
+
+If the `age` column contains:
+
+```text
+-5
+300
+```
+
+These values are invalid and need correction.
+
+---
+
+# 5. Data Wrangling / Data Cleaning
+
+Data Cleaning means preparing raw data into a usable format.
+
+## Tasks Included
+
+- Removing missing values
+- Removing duplicates
+- Fixing incorrect data
+- Converting data types
+
+## Example
+
+### Before Cleaning
+
+| Name  | Age |
+|-------|-----|
+| Rahul | 22  |
+| Aman  | NULL |
+
+### After Cleaning
+
+| Name  | Age |
+|-------|-----|
+| Rahul | 22  |
+| Aman  | 21  |
+
+---
+
+# 6. Feature Engineering
+
+Feature Engineering means creating or selecting useful features for better model performance.
+
+## Examples
+
+### Example 1
+
+Date:
+
+```text
+20-05-2026
+```
+
+Can be converted into:
+
+- Day
+- Month
+- Year
+
+### Example 2
+
+From `"Full Name"`:
+
+- First Name
+- Last Name
+
+## Why Feature Engineering is Important
+
+Good features improve:
+
+- Accuracy
+- Performance
+- Prediction quality
+
+---
+
+# 7. Train-Test Split
+
+Dataset is divided into:
+
+## Training Data
+
+Used to train the model.
+
+## Testing Data
+
+Used to test model performance.
+
+## Common Ratios
+
+| Training | Testing |
+|----------|----------|
+| 70%      | 30%      |
+| 80%      | 20%      |
+
+---
+
+# 8. Model Training
+
+In this step, Machine Learning algorithms learn patterns from data.
+
+## Examples of Algorithms
+
+- Linear Regression
+- Logistic Regression
+- Decision Tree
+- Random Forest
+
+## Example
+
+Training a model to predict:
+
+- House prices
+- Student marks
+- Spam emails
+
+---
+
+# 9. Hyperparameter Tuning
+
+Hyperparameters are settings that control model learning.
+
+Tuning improves model performance.
+
+## Example
+
+For Decision Tree:
+
+- `max_depth`
+- `min_samples_split`
+
+---
+
+# 10. Model Evaluation
+
+After training, model performance is checked using evaluation metrics.
+
+## Evaluation Metrics
+
+### For Classification
+
+- Accuracy
+- Precision
+- Recall
+- F1-Score
+
+### For Regression
+
+- MAE
+- MSE
+- RMSE
+
+## Example
+
+Spam Detection Model:
+
+```text
+Accuracy = 95%
+```
+
+This means:
+
+95% predictions are correct.
+
+---
+
+# 11. Confusion Matrix
+
+Confusion Matrix evaluates classification models.
+
+## Terms
+
+### True Positive (TP)
+
+Correct prediction of positive class.
+
+#### Example
+
+```text
+Predicted = Spam
+Actual = Spam
+```
+
+---
+
+### True Negative (TN)
+
+Correct prediction of negative class.
+
+#### Example
+
+```text
+Predicted = Not Spam
+Actual = Not Spam
+```
+
+---
+
+### False Positive (FP)
+
+Incorrect positive prediction.
+
+#### Example
+
+```text
+Predicted = Spam
+Actual = Not Spam
+```
+
+---
+
+### False Negative (FN)
+
+Incorrect negative prediction.
+
+#### Example
+
+```text
+Predicted = Not Spam
+Actual = Spam
+```
+
+---
+
+# 12. Model Packaging
+
+After training, the model is saved for deployment.
+
+## Common Formats
+
+- Pickle (`.pkl`)
+- ONNX
+- JSON
+
+## Example
+
+```python
+import pickle
+
+pickle.dump(model, open("model.pkl", "wb"))
+```
+
+---
+
+# 13. Model Versioning
+
+Different versions of models are maintained.
+
+## Example
+
+- Model v1
+- Model v2
+- Model v3
+
+## Why It Is Useful
+
+- Tracking improvements
+- Rollback support
+- Experiment comparison
+
+---
+
+# 14. Deployment
+
+Deployment means making the model available for real-world use.
+
+## Examples
+
+- Web applications
+- Mobile apps
+- APIs
+- Cloud services
+
+## Real-Life Example
+
+A spam detection model deployed inside Gmail.
+
+---
+
+# 15. Monitoring & Logging
+
+After deployment, model performance is continuously monitored.
+
+## Monitoring Checks
+
+- Accuracy drop
+- Data drift
+- Model decay
+- Errors
+
+## Example
+
+If user behavior changes:
+
+Old model accuracy may decrease.
+
+Then retraining is needed.
+
+---
+
+# 16. Feedback Loop
+
+New data from production is used to retrain and improve the model.
+
+## Example
+
+Netflix recommendation system improves using:
+
+- New watch history
+- User ratings
+
+---
+
+# 17. Software Code Pipeline
+
+Machine Learning Engineering also uses software engineering practices.
+
+## Includes
+
+- Code versioning
+- Git/GitHub
+- CI/CD
+- Automated testing
+
+## Example Tools
+
+| Purpose | Tools |
+|---------|------|
+| Version Control | Git |
+| CI/CD | Jenkins, GitHub Actions |
+| Deployment | Docker, Kubernetes |
+
+---
+
+# 18. Data Versioning
+
+Data versions are maintained just like code versions.
+
+## Why Important?
+
+Because:
+
+- Data changes over time
+- Results may change
+
+## Example
+
+- `Dataset_v1.csv`
+- `Dataset_v2.csv`
+
+---
+
+# 19. End-to-End Example
+
+# House Price Prediction Project
+
+## Step 1: Collect Data
+
+Collect:
+
+- House size
+- Location
+- Number of rooms
+
+---
+
+## Step 2: Clean Data
+
+Remove:
+
+- Missing values
+- Duplicate records
+
+---
+
+## Step 3: Feature Engineering
+
+Create:
+
+- Price per square foot
+
+---
+
+## Step 4: Train Model
+
+Use:
+
+- Linear Regression
+
+---
+
+## Step 5: Evaluate Model
+
+Check:
+
+- RMSE
+- Accuracy
+
+---
+
+## Step 6: Deploy Model
+
+Deploy on:
+
+- Website
+- API
+
+---
+
+## Step 7: Monitor Model
+
+Check:
+
+- Prediction quality
+- User feedback
+
+---
+
+# 20. Quick Revision
+
+| Topic | Key Idea |
+|-------|-----------|
+| Data Collection | Gather data |
+| Data Cleaning | Remove errors |
+| Feature Engineering | Create useful features |
+| Model Training | Learn patterns |
+| Evaluation | Measure performance |
+| Deployment | Use model in real world |
+| Monitoring | Track model performance |
+| Feedback Loop | Improve using new data |
+
+---
