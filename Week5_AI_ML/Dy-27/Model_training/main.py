@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # data set load
-data=pd.read_csv("stud.csv")
+data=pd.read_csv("Week5_AI_ML\Dy-27\Model_training\stud.csv")
 x=data[["study_hours","attendance_percentage","sleep_hours"]]
 y=data["marks"]
 xtrain,xtest,ytrain,ytest=train_test_split(
