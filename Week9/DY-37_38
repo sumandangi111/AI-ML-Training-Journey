@@ -1,0 +1,398 @@
+# AI Agents
+
+## What are AI Agents?
+
+AI Agents are software systems that can perceive their environment, process information, make decisions, and take actions to achieve specific goals with a degree of autonomy.
+
+### Key Characteristics
+
+* Autonomous decision-making
+* Goal-oriented behavior
+* Environmental perception
+* Adaptability through learning
+* Collaboration with humans and other agents
+
+---
+
+# Agent Architecture
+
+An AI Agent is typically built using four major modules:
+
+## 1. Profiling Module (Persona)
+
+The profiling module defines the agent's role, behavior, personality, and objectives.
+
+### Responsibilities
+
+* Understands the agent's purpose
+* Collects information from the environment
+* Forms perceptions for decision-making
+
+### Example
+
+A self-driving car uses cameras and sensors to detect roads, obstacles, and traffic signals.
+
+---
+
+## 2. Memory Module
+
+The memory module stores and retrieves information from past interactions and experiences.
+
+### Types of Memory
+
+#### Short-Term Memory
+
+Stores information related to the current interaction.
+
+#### Long-Term Memory
+
+Stores historical conversations and data for future use.
+
+#### Episodic Memory
+
+Remembers specific past events and experiences.
+
+#### Consensus Memory
+
+Shares knowledge among multiple agents in a system.
+
+### Benefits
+
+* Maintains context
+* Learns from experience
+* Improves future decisions
+
+---
+
+## 3. Planning Module
+
+The planning module is responsible for reasoning and decision-making.
+
+### Responsibilities
+
+* Evaluates available options
+* Predicts outcomes
+* Selects the best course of action
+
+### Example
+
+A chess AI analyzes future moves before selecting the best strategy.
+
+---
+
+## 4. Action Module
+
+The action module executes decisions in the real world.
+
+### Responsibilities
+
+* Converts plans into actions
+* Interacts with systems, users, or environments
+
+### Example
+
+A robot vacuum moves to a dirty area after deciding where cleaning is needed.
+
+---
+
+# Tool Usage in AI Agents
+
+## What are Tools?
+
+Tools are external resources, APIs, software functions, or services that an AI agent uses to perform tasks beyond its internal capabilities.
+
+### Common Tool Types
+
+* Web Search APIs
+* Databases
+* Calculators
+* File Systems
+* External Applications
+* Sensors and IoT Devices
+
+### Why Tools are Important
+
+Tools allow agents to:
+
+* Access real-time information
+* Perform calculations
+* Control devices
+* Process files
+* Interact with external systems
+
+### Example
+
+A travel assistant agent may use:
+
+* Weather API
+* Flight Booking API
+* Hotel Reservation API
+
+to complete a travel-planning task.
+
+---
+
+# Planning & Reasoning
+
+## What is Planning?
+
+Planning is the process of determining a sequence of actions required to achieve a goal.
+
+### Planning Workflow
+
+```text
+Goal
+ ↓
+Analyze Current State
+ ↓
+Generate Possible Actions
+ ↓
+Evaluate Outcomes
+ ↓
+Select Best Plan
+ ↓
+Execute Actions
+```
+
+### Example
+
+Goal: Deliver a Package
+
+The agent:
+
+1. Finds possible routes
+2. Evaluates distance and traffic
+3. Chooses the best route
+4. Executes delivery
+
+---
+
+## What is Reasoning?
+
+Reasoning is the ability of an agent to analyze information and make logical decisions.
+
+### Reasoning Capabilities
+
+* Understand situations
+* Compare alternatives
+* Predict outcomes
+* Make informed decisions
+
+### Example
+
+A medical AI reasons about symptoms and suggests possible diagnoses.
+
+---
+
+## Goal-Based Agents
+
+Goal-based agents use planning and reasoning to achieve specific objectives.
+
+### Characteristics
+
+* Focus on achieving goals
+* Evaluate future outcomes
+* Explore multiple action paths
+* Use search and planning algorithms
+
+### Example
+
+A logistics agent finds the fastest and most cost-effective delivery route.
+
+---
+
+## Utility-Based Agents
+
+Utility-based agents select actions that maximize overall benefit or utility.
+
+### Characteristics
+
+* Handle uncertainty
+* Compare multiple options
+* Optimize rewards and outcomes
+* Balance trade-offs
+
+### Example
+
+A financial investment agent chooses investments with the best risk-return balance.
+
+---
+
+# Memory Systems
+
+Memory allows agents to retain information and improve performance over time.
+
+## Importance of Memory
+
+Memory helps agents:
+
+* Maintain conversation context
+* Learn from past experiences
+* Personalize responses
+* Improve future decisions
+
+---
+
+## Types of Memory
+
+### Short-Term Memory
+
+Stores temporary information during current tasks.
+
+**Example:** Remembering the user's current question.
+
+---
+
+### Long-Term Memory
+
+Stores information for future use.
+
+**Example:** Remembering previous customer interactions.
+
+---
+
+### Episodic Memory
+
+Stores specific experiences and events.
+
+**Example:** Remembering a past support ticket.
+
+---
+
+### Consensus Memory
+
+Shared memory among multiple agents.
+
+**Example:** Multiple customer-service agents sharing knowledge.
+
+---
+
+## Learning Through Memory
+
+Learning agents use memory to:
+
+* Analyze previous actions
+* Receive feedback
+* Update internal models
+* Improve future performance
+
+---
+
+# Multi-Agent Systems (MAS)
+
+## What is a Multi-Agent System?
+
+A Multi-Agent System (MAS) consists of multiple autonomous agents interacting within a shared environment.
+
+These agents may:
+
+* Cooperate
+* Compete
+* Coordinate
+* Share information
+
+to achieve goals.
+
+---
+
+## Characteristics of MAS
+
+### Distributed Decision-Making
+
+No single central controller exists.
+
+### Collaboration
+
+Agents work together to solve problems.
+
+### Scalability
+
+Can handle large and complex systems.
+
+### Robustness
+
+The system can continue functioning even if some agents fail.
+
+---
+
+## Types of Agent Interactions
+
+### Cooperative Agents
+
+Work together toward a common goal.
+
+**Example:** Warehouse robots coordinating deliveries.
+
+---
+
+### Competitive Agents
+
+Compete against each other.
+
+**Example:** AI players in strategic games.
+
+---
+
+### Mixed Agents
+
+Sometimes cooperate and sometimes compete.
+
+**Example:** Financial trading systems.
+
+---
+
+## Example: Smart Warehouse
+
+A warehouse may contain multiple agents:
+
+### Reflex Agent
+
+Avoids obstacles.
+
+### Goal-Based Agent
+
+Assigns delivery tasks.
+
+### Utility-Based Agent
+
+Prioritizes urgent orders.
+
+### Learning Agent
+
+Improves routing over time.
+
+Together, they create an efficient automated warehouse system.
+
+---
+
+# Summary
+
+| Topic                | Purpose                                                          |
+| -------------------- | ---------------------------------------------------------------- |
+| Agent Architecture   | Defines how an agent perceives, thinks, remembers, and acts      |
+| Tool Usage           | Enables interaction with external systems and resources          |
+| Planning & Reasoning | Helps agents make intelligent decisions and achieve goals        |
+| Memory Systems       | Stores information and improves future performance               |
+| Multi-Agent Systems  | Multiple agents collaborate or compete to solve complex problems |
+
+---
+
+# AI Agent Workflow
+
+```text
+Environment
+      ↓
+Profiling Module
+      ↓
+Memory Module
+      ↓
+Planning & Reasoning
+      ↓
+Tool Usage
+      ↓
+Action Module
+      ↓
+Environment
+```
+
+This workflow represents how modern AI agents perceive information, use memory and tools, reason about tasks, and execute actions autonomously.
