@@ -1,3 +1,4 @@
+# 1.
 new="banana"
 l1={}
 for i in new:
@@ -7,6 +8,7 @@ for i in new:
         l1[i]=1
 print(l1)
 
+# 2.
 l1=[10,5,20,20,8]
 larg=l1[0]
 sec_lar=l1[0]
@@ -19,6 +21,7 @@ for i in range(0,len(l1)):
 print(larg)
 print(sec_lar)
 
+# 3.
 n=123
 num=n
 result=0
@@ -27,14 +30,16 @@ while num>0:
     result=result*10+digit
     num=num//10
 print(result)
-#-----------------------
+
+# 5.
 old=[1,2,2,3,1,4]
 new=[]
 for i in range(0,len(old)):
     if old[i] not in new:
         new.append(old[i])
 print(new)
-#------------------------
+
+# 6.
 l=[10,5,3,4,3,5,6]
 new=[]
 for i in range(0,len(l)):
