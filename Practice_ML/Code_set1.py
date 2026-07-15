@@ -58,4 +58,101 @@ for i in range(8):
     print(func(i),end=" ")
 
 #--------------------------------
+# 4.
+s = "({[]})"
 
+stack = []
+balanced = True
+
+for ch in s:
+    if ch == "(" or ch == "{" or ch == "[":
+        stack.append(ch)
+
+    elif ch == ")":
+        if len(stack) == 0 or stack.pop() != "(":
+            balanced = False
+            break
+
+    elif ch == "}":
+        if len(stack) == 0 or stack.pop() != "{":
+            balanced = False
+            break
+
+    elif ch == "]":
+        if len(stack) == 0 or stack.pop() != "[":
+            balanced = False
+            break
+
+if balanced and len(stack) == 0:
+    print(True)
+else:
+    print(False)
+
+# 7.
+list1 = [1, 3, 5]
+list2 = [2, 4, 6]
+
+i = 0
+j = 0
+result = []
+
+while i < len(list1) and j < len(list2):
+
+    if list1[i] < list2[j]:
+        result.append(list1[i])
+        i += 1
+    else:
+        result.append(list2[j])
+        j += 1
+
+# Add remaining elements of list1
+while i < len(list1):
+    result.append(list1[i])
+    i += 1
+
+# Add remaining elements of list2
+while j < len(list2):
+    result.append(list2[j])
+    j += 1
+
+print(result)
+
+# 8. 
+import string
+
+sentence = "Python is very powerful!"
+
+# Remove punctuation
+sentence = sentence.translate(str.maketrans("", "", string.punctuation))
+
+words = sentence.split()
+
+longest = ""
+
+for word in words:
+    if len(word) > len(longest):
+        longest = word
+
+print(longest)
+
+# 9.
+nums = [3, 0, 1]
+
+n = len(nums)
+
+expected_sum = n * (n + 1) // 2
+actual_sum = sum(nums)
+
+missing = expected_sum - actual_sum
+
+print(missing)
+
+# 10.
+arr = [1, 2, 3, 4, 5]
+k = 2
+
+k = k % len(arr)
+
+arr = arr[-k:] + arr[:-k]
+
+print(arr)
